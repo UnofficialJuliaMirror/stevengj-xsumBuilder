@@ -12,7 +12,7 @@ cd $WORKSPACE/srcdir/xsum
 if [[ $target == i686-* ]]; then
     xsumfpmath="-mfpmath=sse"
 fi
-${CC} ${LDFLAGS} -shared -fPIC -O3 ${xsumfpmath} -fno-inline-functions -o ${libdir}/libxsum.${dlext}
+${CC} ${LDFLAGS} -shared -fPIC -O3 ${xsumfpmath} -fno-inline-functions -o ${libdir}/libxsum.${dlext} xsum.c pbinary.c
 """
 
 # These are the platforms we will build for by default, unless further
