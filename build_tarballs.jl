@@ -9,10 +9,12 @@ sources = [
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir/xsum
+mkdir -p ${libdir}
 if [[ $target == i686-* ]]; then
     xsumfpmath="-mfpmath=sse"
 fi
 ${CC} ${LDFLAGS} -shared -fPIC -O3 -std=c99 ${xsumfpmath} -fno-inline-functions -o ${libdir}/libxsum.${dlext} xsum.c pbinary.c
+ls ${libdir}/libxsum.*
 """
 
 # These are the platforms we will build for by default, unless further
