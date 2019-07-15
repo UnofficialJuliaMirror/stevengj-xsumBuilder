@@ -1,6 +1,6 @@
 using BinaryBuilder
 
-# Collection of sources required to build Blosc
+# Collection of sources required to build Xsum
 sources = [
     "https://gitlab.com/radfordneal/xsum.git" =>
     "63bd4c13e4a8da4932ded362e2921ed99079f432", # version 2018-12-02 "1.0"
